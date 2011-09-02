@@ -17,6 +17,7 @@ class node:
         children = zkc.children(name)
         return render.page(home, name, data, info, children)
 
-app = web.application(urls, globals())
-app.internalerror = web.debugerror
-app.run()
+if __name__ == '__main__' :
+    app = web.application(urls, globals())
+    app.internalerror = web.debugerror
+    app.run()
